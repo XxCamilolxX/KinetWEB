@@ -6,7 +6,7 @@
 
 .topRail {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.8rem;
 }
 
@@ -118,6 +118,82 @@
   inset: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Proyecto Vistas Previas */
+.previewImageWrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: saturate(0.85) contrast(1.05);
+}
+
+.previewStage:hover .previewImage {
+  transform: scale(1.04);
+  filter: saturate(1.1) contrast(1.1) brightness(0.8);
+}
+
+.previewImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 9, 25, 0.1) 0%,
+    rgba(15, 9, 25, 0.3) 30%,
+    rgba(15, 9, 25, 0.82) 80%,
+    rgba(15, 9, 25, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+/* Hover CTA */
+.hoverCTA {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 300ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.previewStage:hover .hoverCTA {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--color-accent);
+  color: #0b0714;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  box-shadow: 0 0 30px var(--color-accent-soft);
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(198, 255, 52, 0.45);
 }
 
 .previewNoise {
@@ -157,9 +233,9 @@
   left: 1.4rem;
   right: 1.4rem;
   bottom: 5.4rem;
-  z-index: 1;
+  z-index: 2;
   display: grid;
-  gap: 0.8rem;
+  gap: 0.6rem;
   animation: previewContentIn 520ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -171,18 +247,21 @@
 }
 
 .previewContent h3 {
-  max-width: 14ch;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  line-height: 0.94;
-  letter-spacing: -0.06em;
+  max-width: 24ch;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.0;
+  letter-spacing: -0.04em;
   text-wrap: balance;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.previewContent span {
-  max-width: 34rem;
+.previewSolution {
+  max-width: 38rem;
   color: var(--color-text-muted);
-  line-height: 1.72;
+  line-height: 1.6;
+  font-size: 0.92rem;
   text-wrap: pretty;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .surfaceBand {
@@ -328,8 +407,64 @@
   }
 }
 
-@media (max-width: 980px) {
-  .topRail,
+/* Estilos para el enlace del Dossier */
+.dossierCardLink {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid rgba(198, 255, 52, 0.2);
+  background: linear-gradient(135deg, rgba(198, 255, 52, 0.04), rgba(255, 255, 255, 0.02));
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), background var(--transition-smooth);
+}
+
+.dossierCardLink:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  background: linear-gradient(135deg, rgba(198, 255, 52, 0.08), rgba(255, 255, 255, 0.04));
+}
+
+.liveLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: #0b0714;
+  background: var(--color-accent);
+  border: none;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  box-shadow: 0 6px 18px rgba(198, 255, 52, 0.15);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+.liveLinkBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(198, 255, 52, 0.3);
+  background: #d4ff55;
+}
+
+.dossierNote {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  opacity: 0.85;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .topRail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .topRail {
+    grid-template-columns: 1fr;
+  }
   .labShell {
     grid-template-columns: 1fr;
   }

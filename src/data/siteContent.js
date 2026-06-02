@@ -1,3 +1,8 @@
+import auroraImg from "../assets/aurora_cafe.png";
+import fornoImg from "../assets/forno_pizzeria.png";
+import nocturnoImg from "../assets/nocturno_acoustics.png";
+import spaceImg from "../assets/kinet_space.png";
+
 export const navItems = [
   { label: "Inicio", href: "#top" },
   { label: "Como funciona", href: "#engine" },
@@ -140,58 +145,84 @@ export const storyChapters = [
 
 export const sampleWorks = [
   {
-    id: "andina-pack",
+    id: "aurora-cafe",
     code: "LAB-01",
-    title: "Modulo demo para feria industrial",
-    category: "Micro-sitio reactivo",
-    summary:
-      "Pensado para una marca industrial que necesita convertir una pantalla en una herramienta comercial durante la feria.",
-    placeholderTitle: "Aqui puede vivir un teaser, un render o una captura del recorrido real",
-    placeholderText:
-      "Este stage queda listo para subir una pieza real y mostrarla con contexto, no como una imagen perdida dentro de una galeria.",
+    title: "Catálogo Táctil de Especialidad",
+    category: "Menú Inmersivo 3D",
+    sector: "Gastronomía / Cafetería de Especialidad",
+    url: "https://aurora-cafe-carta-npzj-bo068wrcp-alekxander00s-projects.vercel.app/",
+    summary: "Transformación de la carta de café tradicional en una experiencia digital inmersiva, superando las limitaciones del formato impreso o PDF.",
+    problem: "Las cartas tradicionales en formato impreso o PDF reducen la experiencia del café de especialidad a una simple lista de precios, perdiendo el atractivo visual del producto real.",
+    solution: "Transformamos el menú en un entorno de exploración. Desarrollamos una interfaz web que integra modelos 3D interactivos, permitiendo al usuario rotar, acercar y detallar la textura de las bebidas y la pastelería antes de ordenar. El 3D deja de ser un adorno para convertirse en la principal herramienta de venta.",
+    image: auroraImg,
     interactions: [
-      "Scroll con ritmo editorial",
-      "Capas de informacion por toque",
-      "CTA comercial integrado al recorrido"
+      "Exploración y rotación de modelos 3D",
+      "Detalle táctil de texturas de repostería",
+      "Filtros de ingredientes interactivos",
+      "Transiciones fluidas entre categorías"
     ],
-    surfaces: ["Pantalla vertical", "Tablet comercial", "Follow-up web"],
-    note: "Ideal para Andina Pack, FIB o cualquier activacion B2B donde la pantalla debe ayudar a vender."
+    surfaces: ["iPad en mesa", "Pantalla táctil de pedido", "Menú QR móvil"],
+    note: "Optimizado para tablets y pantallas táctiles de alta frecuencia de refresco, mejorando el ticket promedio de compra mediante apetito visual."
   },
   {
-    id: "construct-grid",
+    id: "forno-pizzeria",
     code: "LAB-02",
-    title: "Catalogo tactil para acabados y arquitectura",
-    category: "Catalogo 3D / configurador",
-    summary:
-      "Una pieza pensada para estudios, constructoras o inmobiliarias que necesitan mostrar materiales y variantes sin depender de VR.",
-    placeholderTitle: "Aqui puede entrar una secuencia, un render o una vista 3D ligera",
-    placeholderText:
-      "Este espacio sirve para mostrar un before-after, una secuencia de acabados o un configurador corto sin romper la composicion.",
+    title: "Exhibición de Producto Reactivo",
+    category: "Landing Page / WebGL",
+    sector: "Consumo Masivo / Pizzería",
+    url: "https://forno-pizzeria.vercel.app/",
+    summary: "Exhibición digital hiperrealista que supera la barrera de la fotografía plana para incentivar la compra impulsiva de alimentos.",
+    problem: "Vender comida a través de una pantalla exige superar la barrera del 'apetito visual'. Una fotografía plana no transmite la dimensión, los ingredientes ni la textura del producto.",
+    solution: "Construimos un catálogo virtual enfocado enteramente en el hiperrealismo. Optimizamos modelos 3D de alta fidelidad para que corrieran de manera fluida en el navegador. El usuario controla la cámara y la rotación de las pizzas, generando un recorrido visual interactivo que provoca una reacción inmediata y acelera la decisión de compra.",
+    image: fornoImg,
     interactions: [
-      "Cambio de acabado en vivo",
-      "Comparacion visual por escenas",
-      "Lectura espacial clara en tablet"
+      "Rotación interactiva de pizzas 3D WebGL",
+      "Visualización por capas de ingredientes",
+      "Desplazamiento horizontal tipo carrusel 3D",
+      "Zoom con enfoque de cámara cinematográfico"
     ],
-    surfaces: ["iPad en stand", "Mesa tactil", "Pantalla de ventas"],
-    note: "Ideal para vivienda, arquitectura comercial y ventas que necesitan explicar diferencias rapido."
+    surfaces: ["Web de escritorio", "Móvil reactivo", "Kiosko de autoservicio"],
+    note: "Logra 60fps constantes en navegadores móviles estándar mediante optimización de polígonos y mapas de normales."
   },
   {
-    id: "logistics-flow",
+    id: "nocturno-acoustics",
     code: "LAB-03",
-    title: "Instalacion tactil para trazabilidad y servicios",
-    category: "Experiencia de stand",
-    summary:
-      "Un recorrido modular para empresas de tecnologia o logistica que necesitan explicar procesos complejos sin saturar al visitante.",
-    placeholderTitle: "Zona preparada para demo navegable o mockup de kiosko",
-    placeholderText:
-      "Aqui puede entrar una foto del montaje, una secuencia de video o una mini app con hotspots reales.",
+    title: "El Laboratorio de Señal",
+    category: "Instalación Táctil con Físicas",
+    sector: "Hardware de Audio / Tecnología Musical",
+    url: "https://nocturno-acoustics.vercel.app/",
+    summary: "Simulación táctil de sintetizadores modulares que elimina el caos de cables físicos en stands y ferias, facilitando la comprensión comercial.",
+    problem: "En las ferias de música, exhibir hardware complejo como sintetizadores modulares suele resultar en stands saturados de cables físicos que confunden al visitante. Explicar el 'flujo de la señal' de manera rápida y atractiva es imposible utilizando catálogos técnicos o videos pasivos.",
+    solution: "Sustituimos el caos del hardware físico por un laboratorio de sonido digital diseñado para pantallas táctiles. Creamos una interfaz basada en nodos móviles y cables vectoriales que responden a físicas de resorte en tiempo real. El usuario interactúa conectando los módulos para modificar el audio directamente en el navegador, entendiendo el producto a través del tacto y la experimentación en lugar de la lectura.",
+    image: nocturnoImg,
     interactions: [
-      "Mapa por hotspots",
-      "Secuencia guiada para ventas",
-      "Transiciones optimizadas para hardware real"
+      "Conexión de cables vectoriales interactivos",
+      "Físicas de resorte y rebote en tiempo real",
+      "Modulación de audio en el navegador",
+      "Nodos de control y knobs multitouch"
     ],
-    surfaces: ["Kiosko", "Led mural", "Pantalla multitouch"],
-    note: "Ideal para mostrar sistemas, rutas, dashboards o flujos donde el orden del relato importa."
+    surfaces: ["Pantalla táctil vertical", "Mesa interactiva de feria", "Tablet demo"],
+    note: "Una alternativa digital interactiva ideal para ferias comerciales y lanzamientos de productos de alta complejidad tecnológica."
+  },
+  {
+    id: "kinet-space",
+    code: "LAB-04",
+    title: "Configurador Espacial Inmobiliario",
+    category: "Visualizador 3D Multitextura",
+    sector: "Arquitectura / Real Estate / Diseño de Interiores",
+    url: "https://kinet-space.vercel.app/",
+    summary: "Visualizador interactivo 3D para salas de ventas que permite a los compradores experimentar la iluminación, acabados y distribución de inmuebles en construcción.",
+    problem: "Vender propiedades sobre planos o renders estáticos obliga al comprador a un gran esfuerzo de imaginación, ralentizando la toma de decisiones y enfriando el proceso comercial.",
+    solution: "Desarrollamos un configurador de ambientes 3D en tiempo real. El usuario interactúa modificando materiales (maderas, mármoles, microcemento), simulando la iluminación solar del inmueble según la hora del día y realizando un recorrido interactivo de 360° sin necesidad de cascos de realidad virtual.",
+    image: spaceImg,
+    interactions: [
+      "Intercambio dinámico de texturas y materiales",
+      "Simulación de iluminación solar día/tarde/noche",
+      "Rotación libre de cámara 360° en baja latencia",
+      "Planos de planta interactivos integrados con vista 3D"
+    ],
+    surfaces: ["Pantalla multitáctil en sala de ventas", "Web de preventa", "Tablet para asesores"],
+    note: "Perfecto para proyectos residenciales y de oficinas que buscan acelerar cierres comerciales mostrando el producto terminado."
   }
 ];
 
