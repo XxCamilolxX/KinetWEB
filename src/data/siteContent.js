@@ -1,7 +1,6 @@
-import auroraImg from "../assets/aurora_cafe.png";
-import fornoImg from "../assets/forno_pizzeria.png";
-import nocturnoImg from "../assets/nocturno_acoustics.png";
-import spaceImg from "../assets/kinet_space.png";
+import auroraImg from "../assets/Aurora.png";
+import fornoImg from "../assets/pizzeria.png";
+import nocturnoImg from "../assets/Nocturno.png";
 
 export const navItems = [
   { label: "Inicio", href: "#top" },
@@ -167,62 +166,62 @@ export const sampleWorks = [
   {
     id: "forno-pizzeria",
     code: "LAB-02",
-    title: "Exhibición de Producto Reactivo",
-    category: "Landing Page / WebGL",
+    title: "Forno Pizzeria",
+    category: "Experiencia Interactiva 3D",
     sector: "Consumo Masivo / Pizzería",
     url: "https://forno-pizzeria.vercel.app/",
-    summary: "Exhibición digital hiperrealista que supera la barrera de la fotografía plana para incentivar la compra impulsiva de alimentos.",
+    summary: "Experiencia inmersiva y premium que eleva la presentación de la comida mediante gráficos 3D en tiempo real, permitiendo a los clientes 'probar con los ojos'.",
     problem: "Vender comida a través de una pantalla exige superar la barrera del 'apetito visual'. Una fotografía plana no transmite la dimensión, los ingredientes ni la textura del producto.",
-    solution: "Construimos un catálogo virtual enfocado enteramente en el hiperrealismo. Optimizamos modelos 3D de alta fidelidad para que corrieran de manera fluida en el navegador. El usuario controla la cámara y la rotación de las pizzas, generando un recorrido visual interactivo que provoca una reacción inmediata y acelera la decisión de compra.",
+    solution: "Construimos un catálogo virtual hiperrealista. El usuario puede rotar y hacer zoom en modelos 3D optimizados. La caja se abre dinámicamente y una UI híbrida flota en el espacio 3D, facilitando un recorrido que acelera la compra.",
     image: fornoImg,
     interactions: [
-      "Rotación interactiva de pizzas 3D WebGL",
-      "Visualización por capas de ingredientes",
-      "Desplazamiento horizontal tipo carrusel 3D",
-      "Zoom con enfoque de cámara cinematográfico"
+      "Visualización 360° y animación de caja dinámica",
+      "Interfaz Híbrida flotante en espacio 3D",
+      "Vista de detalle de rebanada sin cortes",
+      "E-commerce Ready con carrito integrado"
     ],
-    surfaces: ["Web de escritorio", "Móvil reactivo", "Kiosko de autoservicio"],
-    note: "Logra 60fps constantes en navegadores móviles estándar mediante optimización de polígonos y mapas de normales."
+    surfaces: ["Web de escritorio", "Móvil responsivo (100dvh)", "Kiosko interactivo"],
+    note: "Arquitectura React + Vite, Three.js, @react-three/fiber. Modelos .glb optimizados."
   },
   {
     id: "nocturno-acoustics",
     code: "LAB-03",
-    title: "El Laboratorio de Señal",
-    category: "Instalación Táctil con Físicas",
+    title: "Nocturno Signal Laboratory",
+    category: "Síntesis y DSP Modular",
     sector: "Hardware de Audio / Tecnología Musical",
     url: "https://nocturno-acoustics.vercel.app/",
-    summary: "Simulación táctil de sintetizadores modulares que elimina el caos de cables físicos en stands y ferias, facilitando la comprensión comercial.",
-    problem: "En las ferias de música, exhibir hardware complejo como sintetizadores modulares suele resultar en stands saturados de cables físicos que confunden al visitante. Explicar el 'flujo de la señal' de manera rápida y atractiva es imposible utilizando catálogos técnicos o videos pasivos.",
-    solution: "Sustituimos el caos del hardware físico por un laboratorio de sonido digital diseñado para pantallas táctiles. Creamos una interfaz basada en nodos móviles y cables vectoriales que responden a físicas de resorte en tiempo real. El usuario interactúa conectando los módulos para modificar el audio directamente en el navegador, entendiendo el producto a través del tacto y la experimentación en lugar de la lectura.",
+    summary: "Experiencia interactiva de síntesis y procesamiento de audio modular analógico en la web, que rinde homenaje a los sintetizadores de rack de 1974.",
+    problem: "En ferias de música, exhibir hardware complejo confunde al visitante con un caos de cables físicos. Explicar el flujo de la señal de manera rápida y atractiva es casi imposible usando herramientas pasivas.",
+    solution: "Cambiamos el caos físico por una mesa de trabajo infinita. Los usuarios conectan cables con físicas Verlet y manipulan módulos (Tape Player, Waveshaper, Delay, Mixer). Todo procesado con Web Audio API puro, sin librerías externas.",
     image: nocturnoImg,
     interactions: [
-      "Conexión de cables vectoriales interactivos",
-      "Físicas de resorte y rebote en tiempo real",
-      "Modulación de audio en el navegador",
-      "Nodos de control y knobs multitouch"
+      "Cables colgantes interactivos (Motor de físicas Verlet)",
+      "Conexión magnética de jacks y estante táctil",
+      "Bocina reactiva con FFT (Squash & Stretch)",
+      "Streaming inteligente con BPM procedural (Seed-Hash)"
     ],
-    surfaces: ["Pantalla táctil vertical", "Mesa interactiva de feria", "Tablet demo"],
-    note: "Una alternativa digital interactiva ideal para ferias comerciales y lanzamientos de productos de alta complejidad tecnológica."
+    surfaces: ["Mesa de trabajo infinita", "Pantalla táctil vertical", "Tablet interactiva"],
+    note: "Performance a 60 FPS actualizando directamente el DOM vía requestAnimationFrame."
   },
   {
-    id: "kinet-space",
+    id: "eco-heroes",
     code: "LAB-04",
-    title: "Configurador Espacial Inmobiliario",
-    category: "Visualizador 3D Multitextura",
-    sector: "Arquitectura / Real Estate / Diseño de Interiores",
-    url: "https://kinet-space.vercel.app/",
-    summary: "Visualizador interactivo 3D para salas de ventas que permite a los compradores experimentar la iluminación, acabados y distribución de inmuebles en construcción.",
-    problem: "Vender propiedades sobre planos o renders estáticos obliga al comprador a un gran esfuerzo de imaginación, ralentizando la toma de decisiones y enfriando el proceso comercial.",
-    solution: "Desarrollamos un configurador de ambientes 3D en tiempo real. El usuario interactúa modificando materiales (maderas, mármoles, microcemento), simulando la iluminación solar del inmueble según la hora del día y realizando un recorrido interactivo de 360° sin necesidad de cascos de realidad virtual.",
-    image: spaceImg,
+    title: "EcoHéroes",
+    category: "Minijuego Educativo",
+    sector: "Educación Ambiental / Gamificación",
+    url: "#",
+    summary: "Aplicación web interactiva y modular diseñada para enseñar las normas de reciclaje y separación de residuos mediante mecánicas de velocidad y memoria.",
+    problem: "Concientizar sobre la correcta clasificación de residuos suele ser un proceso monótono y poco visual, lo que dificulta el aprendizaje y la retención de las normas de reciclaje.",
+    solution: "Desarrollamos un juego con mecánicas de arrastre elástico (swipe). Los usuarios asocian desechos con canecas codificadas por colores (Aprovechables, Orgánicos, No Aprovechables). Incluye al Oso de Anteojos como mascota dinámica y ayudas visuales inteligentes.",
+    image: null,
     interactions: [
-      "Intercambio dinámico de texturas y materiales",
-      "Simulación de iluminación solar día/tarde/noche",
-      "Rotación libre de cámara 360° en baja latencia",
-      "Planos de planta interactivos integrados con vista 3D"
+      "Arrastre de tarjetas con físicas elásticas",
+      "Muelle de lanzamiento reactivo y racha de puntos",
+      "Mascota interactiva con reacciones en tiempo real",
+      "Onboarding 3D y asistencia visual inteligente"
     ],
-    surfaces: ["Pantalla multitáctil en sala de ventas", "Web de preventa", "Tablet para asesores"],
-    note: "Perfecto para proyectos residenciales y de oficinas que buscan acelerar cierres comerciales mostrando el producto terminado."
+    surfaces: ["Pantalla táctil móvil", "Kiosko educativo", "Web de escritorio"],
+    note: "Arquitectura React + Vite modular. Efectos sintetizados vía Web Audio API y transiciones fluidas con requestAnimationFrame."
   }
 ];
 
