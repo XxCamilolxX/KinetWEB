@@ -209,7 +209,7 @@ export const sampleWorks = [
     title: "EcoHéroes",
     category: "Minijuego Educativo",
     sector: "Educación Ambiental / Gamificación",
-    url: "#",
+    url: "https://ecoheroes-f9sl.vercel.app/",
     summary: "Aplicación web interactiva y modular diseñada para enseñar las normas de reciclaje y separación de residuos mediante mecánicas de velocidad y memoria.",
     problem: "Concientizar sobre la correcta clasificación de residuos suele ser un proceso monótono y poco visual, lo que dificulta el aprendizaje y la retención de las normas de reciclaje.",
     solution: "Desarrollamos un juego con mecánicas de arrastre elástico (swipe). Los usuarios asocian desechos con canecas codificadas por colores (Aprovechables, Orgánicos, No Aprovechables). Incluye al Oso de Anteojos como mascota dinámica y ayudas visuales inteligentes.",
